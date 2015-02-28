@@ -19,6 +19,7 @@ echo"
 <body class=loadingBody>
 <div class=loadingBG id=loadingBG>
 	<div class=loadingBGTitle><img src=moment.png class=loadingBGTitleImg></div>
+	<div class=loadingBGTitle><img src=loadingdick.gif class=loadingBGTitleImg></div>
 	<div class=loadingBGImagesDiv>
 		<div class=loadingDickTile><img src=balls.png class=loadingDickTileImg></div>";
 	for ($i=1; $i<=$numDifTiles; $i++)
@@ -39,7 +40,7 @@ echo"
 		<div class=loadingBGImagesDiv>";
 	for ($i=1; $i<=$numBGs; $i++)
 	{
-		echo"<div class=loadingDickTile><img src=bg".$i.".jpg class=loadingDickTileImg></div>";
+		echo"<div class=loadingDickTile><img src=bg".$i.".jpg class=loadingDickTileImg style=\"opacity: 0\"></div>";
 	}
 
 	echo "
