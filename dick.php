@@ -3,11 +3,15 @@
  // START GETTING IMAGE URLS
 include ('mysqlconnect.php');
 $BGUrlString = '';
+$BGHeightString = '';
+$BGWidthString = '';
 $query = 'select * from BGUrls';
 $result = mysqli_query($con, $query);
 while ($return = mysqli_fetch_array($result, MYSQL_BOTH))
 {
 	$BGUrlString .= $return['url'].',';
+	$BGWidthString .= $return['width'].',';
+	$BGHeightString .= $return['height'].',';
 }
 
  //END GETTING IMAGE URLS
@@ -95,6 +99,8 @@ echo "
 <input type=hidden id=loadDickTime>
 <input type=hidden id=loadWindowTime>
 <input type=hidden id=BGUrlString value=".$BGUrlString.">
+<input type=hidden id=BGWidthString value=".$BGWidthString.">
+<input type=hidden id=BGHeightString value=".$BGHeightString.">
 <div class=scrollWrapper id=scrollWrapper  onScroll=\"scrollFunction()\"
  onTouchEnd=\"showalert()\" onTouchMove=\"scrollFunction()\" onTouchStart=\"moveTouch(event)\">
 	 <div class=bottomPersonDiv id=bottomPersonDiv>
